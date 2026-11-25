@@ -1,0 +1,162 @@
+.app {
+  min-height: 100vh;
+  text-align: center;
+  padding: 25px 15px;
+  background: #f8f9fa;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 38px;
+  letter-spacing: 8px;
+  margin: 0;
+}
+
+.header p {
+  color: #666;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 20px auto 30px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+.tile {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+}
+
+.tile.correct,
+.key.correct {
+  background: #6aaa64;
+  border-color: #6aaa64;
+  color: white;
+}
+
+.tile.present,
+.key.present {
+  background: #c9b458;
+  border-color: #c9b458;
+  color: white;
+}
+
+.tile.absent,
+.key.absent {
+  background: #787c7e;
+  border-color: #787c7e;
+  color: white;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin: 25px auto;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key {
+  min-width: 34px;
+  height: 48px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 5px;
+  background: #d3d6da;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.key.wide-key {
+  min-width: 65px;
+  font-size: 11px;
+}
+
+.restart-button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 100%;
+}
+
+.modal button {
+  background: #6aaa64;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .tile {
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+  }
+
+  .key {
+    min-width: 27px;
+    height: 43px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+
+  .key.wide-key {
+    min-width: 48px;
+  }
+}
